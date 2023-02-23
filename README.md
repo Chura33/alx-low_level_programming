@@ -1,1 +1,6 @@
-This is the readne that contains information of the entire project
+# This is a readme
+
+``` this is a code fragment```
+## Things that you need
+1. ihiij
+2. iojow
