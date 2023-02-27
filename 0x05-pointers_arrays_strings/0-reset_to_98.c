@@ -2,7 +2,7 @@
 /**
 * reset_to_98(int *n)- function that changes the value of a variable a
 * @n: parameter of the function]
-Return: returns nothing (void)
+* Return: returns nothing (void)
 */
 
 void reset_to_98(int *n)
