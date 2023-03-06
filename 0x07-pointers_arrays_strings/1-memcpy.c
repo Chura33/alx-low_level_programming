@@ -1,9 +1,11 @@
 #include "main.h"
 /**
-* _memcpy(char *dest, char *src, unsigned int n)- this is a function that copies one block of memory into another.
+* _memcpy(char *dest, char *src, unsigned int n)- thisi
+* is a function that copies one block of memory into another.
 * @dest: Parameter that signifies the destination address
 * @src: Parameter that signifies the source address
-* n: Parameter that signifies the size of the block of memory to be copied
+* @n: Parameter that signifies the size of the block of memory to be copied
+* Return: returns a pointer
 */
 
 char *_memcpy(char *dest, char *src, unsigned int n)
@@ -14,6 +16,6 @@ char *_memcpy(char *dest, char *src, unsigned int n)
 	{
 		*(dest + i) = *(src + i);
 
-	}	
+	}
 	return (dest);
 }
