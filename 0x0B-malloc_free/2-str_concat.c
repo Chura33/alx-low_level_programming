@@ -21,23 +21,23 @@ char *str_concat(char *s1, char *s2)
 	if (s2 == NULL)
 		s2 = "";
 
-	for (index = 0; s1[index]||s2[index]; index++)
-		len ++;
+	for (index = 0; s1[index] || s2[index]; index++)
+		len++;
 
 	ptr = (char *) malloc(len * sizeof(char));
 
 	if (ptr == NULL)
 		return (NULL);
-	for (index = 0; s1[index]; index ++)
+	for (index = 0; s1[index]; index++)
 	{
 		ptr[concat_index] = s1[index];
-		concat_index ++;
+		concat_index++;
 	}
 
-	for (index = 0; s2[index]; index ++)
+	for (index = 0; s2[index]; index++)
 	{
 		ptr[concat_index] = s2[index];
-		concat_index ++;
+		concat_index++;
 	}
-	return ptr;
+	return (ptr);
 }
