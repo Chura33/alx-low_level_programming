@@ -2,7 +2,7 @@
 #include "dog.h"
 /**
 * print_dog - prints the dog struct
-* @d - pointer to the memory address of the struct
+* @d: pointer to the memory address of the struct
 * Return: returns void
 */
 
@@ -18,7 +18,7 @@ void print_dog(struct dog *d)
 		{
 			printf("Name: %s\n", d->name);
 
-		}	
+		}
 
 		printf("Age: %.6f\n", (d->age));
 
