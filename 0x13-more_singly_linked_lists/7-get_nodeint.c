@@ -16,5 +16,8 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 	{
 		iterator = iterator->next;
 	}
-	return iterator;
+
+	if (iterator == NULL)
+		return (NULL);
+	return (iterator);
 }
