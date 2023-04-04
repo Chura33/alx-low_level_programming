@@ -4,6 +4,7 @@
 * @head:pointer to pointer to head
 * @idx: index of insertion
 * @n: the element in the node
+* Return: return pointer to the new node
 */
 
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
