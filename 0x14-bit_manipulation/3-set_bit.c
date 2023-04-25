@@ -16,7 +16,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 		return (-1);
 	}
 
-	pin = 1 << index;
+	cover = 1 << index;
 
 	*n = (*n & ~cover) | (1 << index);
 	return (1);
