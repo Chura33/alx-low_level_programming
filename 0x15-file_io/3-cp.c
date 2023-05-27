@@ -6,10 +6,10 @@ char *create_buffer(char *file);
 void close_file(int fd);
 
 /**
- * create_buffer -This function Allocates 1024 bytes for a buffer.
- * @file: The name of the file the buffer stores characters for.
+ * create_buffer - Allocates 1024 bytes for a buffer.
+ * @file: The name of the file buffer is storing chars for.
  *
- * Return: A pointer to the buffer.
+ * Return: A pointer to the newly-allocated buffer.
  */
 char *create_buffer(char *file)
 {
@@ -28,8 +28,8 @@ char *create_buffer(char *file)
 }
 
 /**
- * close_file - This function Closes file descriptors.
- * @fd: The descriptor to be closed.
+ * close_file - Closes file descriptors.
+ * @fd: The file descriptor to be closed.
  */
 void close_file(int fd)
 {
@@ -69,7 +69,7 @@ int main(int argc, char *argv[])
 
 	buffer = create_buffer(argv[2]);
 	from = open(argv[1], O_RDONLY);
-	read = read(from, buffer, 1024);
+	r = read(from, buffer, 1024);
 	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	do {
@@ -81,7 +81,7 @@ int main(int argc, char *argv[])
 			exit(98);
 		}
 
-		w = write(to, buffer, read);
+		w = write(to, buffer, r);
 		if (to == -1 || w == -1)
 		{
 			dprintf(STDERR_FILENO,
@@ -90,7 +90,7 @@ int main(int argc, char *argv[])
 			exit(99);
 		}
 
-		read = read(from, buffer, 1024);
+		r = read(from, buffer, 1024);
 		to = open(argv[2], O_WRONLY | O_APPEND);
 
 	} while (r > 0);
