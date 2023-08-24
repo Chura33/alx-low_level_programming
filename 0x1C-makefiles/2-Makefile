@@ -6,4 +6,4 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	$(CC) -o $(NAME) $(OBJ)
 %.o: %.c
-	$(CC) -c %< %@
+	$(CC) -c $< -o $@
