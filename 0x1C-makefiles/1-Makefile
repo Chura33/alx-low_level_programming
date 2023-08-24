@@ -2,4 +2,4 @@ all: school
 CC =  gcc
 SRC = school.c main.c
 school: $(SRC)
-	$(CC) -std=gnu99 -pedantic -Wall $(SRC)
+	$(CC) $(SRC) -o school
